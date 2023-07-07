@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.4 on win32)" generated="20230707 10:43:00.878" rpa="false" schemaversion="3">
+<suite id="s1" name="Verify Valid Login Suite" source="C:\Mine\Company\John Deere July 2023\HybridFramework\tests\1__login_suite\1__verify_valid_login_suite.robot">
+<test id="s1-t1" name="Verify Valid Login Test" line="10">
+<kw name="Launch Browser And Navigate To Url" library="CommonFunctionalities" type="SETUP">
+<doc>This keywords helps to launch browser and navigate to url</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230707 10:43:01.376" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg timestamp="20230707 10:43:01.383" level="INFO">Executing: C:\Program Files\Python311\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230707 10:43:01.375" endtime="20230707 10:43:02.979"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230707 10:43:02.980" endtime="20230707 10:43:03.097"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230707 10:43:03.097" endtime="20230707 10:43:03.099"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20230707 10:43:03.100" endtime="20230707 10:43:03.101"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>path=${EXECDIR}${/}log${/}screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230707 10:43:03.102" endtime="20230707 10:43:03.103"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230707 10:43:03.103" level="INFO">Opening url 'http://demo.openemr.io/b/openemr'</msg>
+<status status="PASS" starttime="20230707 10:43:03.103" endtime="20230707 10:43:07.738"/>
+</kw>
+<status status="PASS" starttime="20230707 10:43:01.374" endtime="20230707 10:43:07.739"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=authUser</arg>
+<arg>admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230707 10:43:07.740" level="INFO">Typing text 'admin' into text field 'id=authUser'.</msg>
+<status status="PASS" starttime="20230707 10:43:07.739" endtime="20230707 10:43:07.870"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css=#clearPass</arg>
+<arg>pass</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230707 10:43:07.871" level="INFO">Typing text 'pass' into text field 'css=#clearPass'.</msg>
+<status status="PASS" starttime="20230707 10:43:07.870" endtime="20230707 10:43:07.983"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>name=languageChoice</arg>
+<arg>English (Indian)</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230707 10:43:07.983" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
+<status status="PASS" starttime="20230707 10:43:07.983" endtime="20230707 10:43:08.082"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230707 10:43:08.082" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20230707 10:43:08.082" endtime="20230707 10:43:13.079"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>OpenEMR</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230707 10:43:13.097" level="INFO">Page title is 'OpenEMR'.</msg>
+<status status="PASS" starttime="20230707 10:43:13.079" endtime="20230707 10:43:13.097"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230707 10:43:13.098" endtime="20230707 10:43:15.288"/>
+</kw>
+<status status="PASS" starttime="20230707 10:43:01.373" endtime="20230707 10:43:15.289"/>
+</test>
+<doc>This suite verifies valid users are able to login into the portal</doc>
+<status status="PASS" starttime="20230707 10:43:00.882" endtime="20230707 10:43:15.292"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Verify Valid Login Suite">Verify Valid Login Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
