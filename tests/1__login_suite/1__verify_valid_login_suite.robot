@@ -1,5 +1,6 @@
 *** Settings ***
 Documentation       This suite verifies valid users are able to login into the portal
+...   connected to SC_OP_O2 and TC_OP_01
 
 Resource    ../../resource/base/CommonFunctionalities.resource
 
