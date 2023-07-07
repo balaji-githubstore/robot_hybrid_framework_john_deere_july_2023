@@ -7,6 +7,8 @@ Resource    ../base/CommonFunctionalities.resource
 ${USERNAME_LOCATOR}     id=authUser
 ${PASSWORD_LOCATOR}     id=clearPass
 ${APP_DESC_LOCATOR}     xpath=//p[contains(text(),'most')]
+${LOGIN_LOCATOR}    id=login-button
+${LANGUAGE_LOCATOR}     name=languageChoice
 
 *** Keywords ***
 Enter Username
@@ -16,6 +18,13 @@ Enter Username
 Enter Password
     [Arguments]     ${password}
     Input Password    id=clearPass    ${password}
+
+Select Language
+    [Arguments]     ${language}
+    Select From List By Label    ${LANGUAGE_LOCATOR}    ${language}
+
+Click On Login
+    Click Element    ${LOGIN_LOCATOR}
 
 Validate Application Description
     [Arguments]     ${expected_desc}
