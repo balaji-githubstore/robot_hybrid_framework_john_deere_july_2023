@@ -3,6 +3,7 @@ Documentation       This suite verifies invalid users are not allowed to login i
 ...   connected to SC_OP_O2 and TC_OP_01
 
 Resource    ../../resource/base/CommonFunctionalities.resource
+Resource    ../../resource/pages/LoginPage.resource
 
 Test Setup      Launch Browser And Navigate To Url
 Test Teardown   Take Screenshot And Close Browser       ${TEST_NAME}
@@ -20,8 +21,8 @@ Empty Username and Password
 *** Keywords ***
 Verify Invalid Login Template
     [Arguments]     ${username}     ${password}     ${language}     ${expected_error}
-    Input Text    id=authUser12    ${username}
-    Input Text    css=#clearPass    ${password}
+    Enter Username  ${username}
+    Enter Password    ${password}
     Select From List By Label    name=languageChoice    ${language}
     Click Element    id=login-button
     Element Should Contain    xpath=//p[contains(text(),'Invalid')]    ${expected_error}
