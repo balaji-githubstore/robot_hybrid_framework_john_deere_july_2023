@@ -13,6 +13,11 @@ ${LANGUAGE_LOCATOR}     name=languageChoice
 *** Keywords ***
 Enter Username
     [Arguments]     ${username}
+    [Documentation]     Types the given username into the text
+    ...   field identified by locator.\n\n
+    ...     Example \n
+    ...     | Enter Username |  admin |
+    ...     | Enter Username |  john |
     Input Text    ${USERNAME_LOCATOR}    ${username}
     
 Enter Password
