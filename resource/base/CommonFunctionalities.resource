@@ -18,3 +18,5 @@ Launch Browser And Navigate To Url
     Set Screenshot Directory    path=${EXECDIR}${/}log${/}screenshots
     Go To    url=${URL}
 
+
+
