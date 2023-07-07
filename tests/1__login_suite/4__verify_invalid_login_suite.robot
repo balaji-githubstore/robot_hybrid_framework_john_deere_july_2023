@@ -5,7 +5,7 @@ Documentation       This suite verifies invalid users are not allowed to login i
 Resource    ../../resource/base/CommonFunctionalities.resource
 
 Test Setup      Launch Browser And Navigate To Url
-Test Teardown   Close Browser
+Test Teardown   Take Screenshot And Close Browser       ${TEST_NAME}
 
 Test Template       Verify Invalid Login Template
 
@@ -20,7 +20,7 @@ Empty Username and Password
 *** Keywords ***
 Verify Invalid Login Template
     [Arguments]     ${username}     ${password}     ${language}     ${expected_error}
-    Input Text    id=authUser    ${username}
+    Input Text    id=authUser12    ${username}
     Input Text    css=#clearPass    ${password}
     Select From List By Label    name=languageChoice    ${language}
     Click Element    id=login-button
