@@ -4,6 +4,7 @@ Documentation       This suite verifies invalid users are not allowed to login i
 
 Resource    ../../resource/base/CommonFunctionalities.resource
 Resource    ../../resource/pages/LoginPage.resource
+#Resource    ../../resource/pages/MainPage.resource
 
 Test Setup      Launch Browser And Navigate To Url
 Test Teardown   Take Screenshot And Close Browser       ${TEST_NAME}
@@ -18,15 +19,15 @@ Valid Username and Invalid Password
 Empty Username and Password
     ${EMPTY}    pass    Danish      Invalid username or password
 
-*** Keywords ***
-Verify Invalid Login Template
-    [Arguments]     ${username}     ${password}     ${language}     ${expected_error}
-    Enter Username  ${username}
-    Enter Password    ${password}
-    Select From List By Label    name=languageChoice    ${language}
-    Click Element    id=login-button
-    Element Should Contain    xpath=//p[contains(text(),'Invalid')]    ${expected_error}
-
+#*** Keywords ***
+#Verify Invalid Login Template
+#    [Arguments]     ${username}     ${password}     ${language}     ${expected_error}
+#    Enter Username  ${username}
+#    LoginPage.Enter Password    ${password}
+#    Select From List By Label    name=languageChoice    ${language}
+#    Click Element    id=login-button
+#    Element Should Contain    xpath=//p[contains(text(),'Invalid')]    ${expected_error}
+#
 
 
 
