@@ -14,14 +14,6 @@ Verify Admin Login To Portal
     admin   pass    English (Indian)    OpenEMR
 Verify Physician Login To Portal
     physician   physician    English (Indian)    OpenEMR
-TC3
-    [Setup]
-    [Template]
-        Log to Console  hello
-    [Teardown]
-TC4
-    [Template]      Verify Valid Login Template
-    admin   pass    English (Indian)    OpenEMR
 
 *** Keywords ***
 Verify Valid Login Template
